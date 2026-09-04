@@ -1,163 +1,274 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sterling Smart Installations | Precision Home Services in Melbourne, FL</title>
-    <meta name="description" content="Precision home maintenance, drywall texture matching, custom hardware mounting, and smart home device setups across Brevard County. Built on 10 years of industrial pressman discipline.">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        arctic: { DEFAULT: '#00d2ff', dark: '#008cb3' },
-                        phantom: '#0f172a',
-                    }
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sterling Smart Installations | Precision Workmanship</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            phantom: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#818cf8',
+              600: '#6366f1',
+              900: '#312e81',
+              950: '#090a0f',
             }
+          }
         }
-    </script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+      }
+    }
+  </script>
+  <style>
+    .phantom-glass {
+      background: rgba(18, 21, 30, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(129, 140, 248, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    }
+    .phantom-glass-hover:hover {
+      border-color: rgba(129, 140, 248, 0.45);
+      box-shadow: 0 0 25px rgba(129, 140, 248, 0.2);
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
+<body class="bg-[#090a0f] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- Sticky Navigation -->
-    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
-        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-black text-slate-950 text-xl shadow-lg shadow-cyan-500/20">
-                    S
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-extrabold tracking-wider text-slate-100 text-lg group-hover:text-cyan-400 transition-colors">STERLING</span>
-                    <span class="text-[10px] tracking-[0.2em] text-cyan-400 uppercase font-semibold">Smart Installations</span>
-                </div>
-            </a>
-            
-            <div class="flex items-center gap-6">
-                <a href="#services" class="hidden md:inline-block text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">Services</a>
-                <a href="#about" class="hidden md:inline-block text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">Precision Standard</a>
-                <a href="tel:3213451508" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold px-4 py-2.5 rounded-lg text-sm transition-all shadow-md shadow-cyan-500/10">
-                    <i data-lucide="phone" class="w-4 h-4"></i>
-                    <span>(321) 345-1508</span>
-                </a>
-            </div>
+  <!-- NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-50 phantom-glass border-b border-indigo-500/15">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img 
+          src="Sterling Repairs Logo Dark.png" 
+          alt="Sterling Smart Installations Logo" 
+          class="h-12 w-auto object-contain"
+          onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';"
+        />
+        <span id="logo-fallback" class="hidden text-xl font-bold tracking-wider text-white">
+          STERLING <span class="text-indigo-400">SMART</span>
+        </span>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-indigo-400 transition-colors">Services</a>
+        <a href="#portfolio" class="hover:text-indigo-400 transition-colors">Work Gallery</a>
+        <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-indigo-500/10 text-indigo-300 border border-indigo-500/30 font-semibold hover:bg-indigo-500 hover:text-white transition-all">Get Estimate</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="pt-36 pb-20 px-6 max-w-7xl mx-auto">
+    <div class="phantom-glass rounded-3xl p-8 md:p-14 relative overflow-hidden">
+      <div class="max-w-3xl relative z-10">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-indigo-300 bg-indigo-950/80 border border-indigo-500/30 mb-6">
+          Precision Crafts & Smart Infrastructure
+        </span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          High-Gloss Finish. <br/>
+          <span class="bg-gradient-to-r from-indigo-300 via-purple-300 to-slate-200 bg-clip-text text-transparent">
+            Uncompromised Quality.
+          </span>
+        </h1>
+        <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+          From custom finishing work to advanced smart device integration, we deliver clean execution and long-lasting durability for modern residential and commercial spaces.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#contact" class="px-7 py-3.5 rounded-xl bg-indigo-500 text-white font-bold hover:bg-indigo-400 transition-all shadow-lg shadow-indigo-500/25">
+            Schedule Appointment
+          </a>
+          <a href="#portfolio" class="px-7 py-3.5 rounded-xl phantom-glass text-slate-200 font-semibold hover:text-white transition-all">
+            View Recent Work
+          </a>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="relative py-24 px-4 overflow-hidden border-b border-slate-800/50">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950 to-slate-950 pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/50 text-cyan-400 text-xs font-semibold tracking-wide">
-                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                <span>SERVICING BREVARD COUNTY, FL</span>
-            </div>
-            
-            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight">
-                Industrial Precision Applied to <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Residential Improvement.</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
-                Flawless drywall texture matching, custom hardware mounting, and seamless smart device configurations—executed with strict alignment, high-tolerance accuracy, and zero mess.
-            </p>
+  <!-- WORK GALLERY & PHOTOS SECTION -->
+  <section id="portfolio" class="py-16 px-6 max-w-7xl mx-auto">
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white tracking-tight">Recent Installations & Work</h2>
+      <p class="text-slate-400 mt-2">A showcase of craftsmanship, structural finishings, and custom carpentry.</p>
+    </div>
 
-            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="tel:3213451508" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-extrabold px-8 py-4 rounded-xl text-base transition-all shadow-lg shadow-cyan-500/20">
-                    <i data-lucide="phone-call" class="w-5 h-5"></i>
-                    <span>Call (321) 345-1508</span>
-                </a>
-                <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-semibold px-8 py-4 rounded-xl text-base transition-all">
-                    <span>View Core Services</span>
-                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
-                </a>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- PHOTO CARD 1: Drywall Repair -->
+      <div class="phantom-glass phantom-glass-hover rounded-2xl overflow-hidden transition-all duration-300 group">
+        <div class="h-64 bg-slate-900 relative overflow-hidden">
+          <img 
+            src="images/ceiling-entry.jpg" 
+            alt="Ceiling Entryway Drywall Repair" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#090a0f] via-[#090a0f]/20 to-transparent"></div>
         </div>
-    </section>
+        <div class="p-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Drywall & Repair</span>
+          <h3 class="text-xl font-bold text-white mt-1">Ceiling Entryway Drywall Repair</h3>
+          <p class="text-slate-400 text-sm mt-2">Precision ceiling patching, texture matching, and seamless finish integration.</p>
+        </div>
+      </div>
 
-    <!-- Services Grid -->
-    <section id="services" class="py-20 px-4 max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl font-extrabold text-white tracking-tight">Core Capabilities</h2>
-            <p class="text-slate-400 mt-2">Engineered for clean alignment, seamless finishing, and absolute reliability.</p>
+      <!-- PHOTO CARD 2: Deck Build -->
+      <div class="phantom-glass phantom-glass-hover rounded-2xl overflow-hidden transition-all duration-300 group">
+        <div class="h-64 bg-slate-900 relative overflow-hidden">
+          <img 
+            src="images/deck2.jpg" 
+            alt="Custom Deck Build" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#090a0f] via-[#090a0f]/20 to-transparent"></div>
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Custom Carpentry</span>
+          <h3 class="text-xl font-bold text-white mt-1">Custom Exterior Deck Build</h3>
+          <p class="text-slate-400 text-sm mt-2">Solid structural framing, clean board alignment, and long-lasting outdoor construction.</p>
+        </div>
+      </div>
+
+      <!-- PHOTO CARD 3: Remodel Project -->
+      <div class="phantom-glass phantom-glass-hover rounded-2xl overflow-hidden transition-all duration-300 group">
+        <div class="h-64 bg-slate-900 relative overflow-hidden">
+          <img 
+            src="images/remodel-1.jpg" 
+            alt="Full Interior Remodel Overview" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#090a0f] via-[#090a0f]/20 to-transparent"></div>
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Property Remodel</span>
+          <h3 class="text-xl font-bold text-white mt-1">Interior Space Remodel</h3>
+          <p class="text-slate-400 text-sm mt-2">Comprehensive renovation detailing structural updates, modern surfaces, and custom finishing.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT & SCHEDULING SECTION -->
+  <section id="contact" class="py-16 px-6 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- LEFT COLUMN: INFO & CALIBRATION LOOP -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-indigo-300 bg-indigo-950/80 border border-indigo-500/30 mb-4">
+            Direct Booking
+          </span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">The Calibration Loop</h2>
+          <p class="text-slate-400 text-base mt-3 leading-relaxed">
+            Schedule a dedicated project evaluation or consultation. Tell us about your installation, finish work, or custom technical project needs.
+          </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Card 1 -->
-            <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-cyan-950 border border-cyan-800/60 text-cyan-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <i data-lucide="wrench" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Precision Assembly & Finish Work</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                    Expert drywall patch repair and invisible texture matching. Laser-level mounting for heavy fixtures, TV wall brackets, custom cabinetry hardware, and trim adjustments.
-                </p>
-                <ul class="text-xs text-slate-300 space-y-2">
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Drywall Patching & Texture Matching</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Heavy Fixture & Bracket Alignment</li>
-                </ul>
+        <div class="space-y-4">
+          <div class="phantom-glass p-5 rounded-2xl flex items-center gap-4">
+            <div class="p-3 bg-indigo-500/10 rounded-xl border border-indigo-500/20 text-indigo-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
-
-            <!-- Card 2 -->
-            <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-cyan-950 border border-cyan-800/60 text-cyan-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <i data-lucide="wifi" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Smart Home Setup & Hardware Integration</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                    Clean, secure setup of smart door locks, battery/plug-in security cameras, smart doorbells, and wireless hub configurations. Precision mounting with no visible clutter.
-                </p>
-                <ul class="text-xs text-slate-300 space-y-2">
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Smart Lock & Access Hardware Setup</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Wireless Security & Device Mounting</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Heritage / Philosophy -->
-    <section id="about" class="py-20 px-4 bg-slate-900/40 border-y border-slate-800/50">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2 space-y-4">
-                <div class="text-cyan-400 text-xs font-bold tracking-widest uppercase">The Precision Standard</div>
-                <h2 class="text-3xl font-extrabold text-white">Built on Industrial Discipline</h2>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Founded by Matthew J. Brancheau, Sterling Smart Installations operates on a mechanical standard formed over ten years as an industrial offset pressman.
-                </p>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    In commercial printing, alignment is measured in thousandths of an inch. That same systematic focus, rigorous attention to detail, and clean execution are brought directly to your home projects.
-                </p>
-            </div>
-            <div class="w-full md:w-1/2 bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
-                <div class="flex items-center gap-4 border-b border-slate-800 pb-4">
-                    <div class="text-cyan-400 font-bold text-2xl">100%</div>
-                    <div class="text-xs text-slate-400">Exact alignment standards; zero mess left behind on completion.</div>
-                </div>
-                <div class="flex items-center gap-4">
-                    <div class="text-cyan-400 font-bold text-2xl">Brevard</div>
-                    <div class="text-xs text-slate-400">Based in Melbourne, FL serving Palm Bay, Viera, & Suntree.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 border-t border-slate-900 bg-slate-950">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
-                <p class="font-bold text-slate-200">Sterling Smart Installations</p>
-                <p class="text-xs text-slate-500 mt-1">Based in Melbourne, FL 32935 | Serving Brevard County</p>
+              <h4 class="text-sm font-semibold text-slate-200">Service Coverage</h4>
+              <p class="text-xs text-slate-400">Brevard County & Surrounding Areas</p>
             </div>
-            <p class="text-xs text-slate-600">&copy; 2026 Sterling Smart Installations. All rights reserved.</p>
-        </div>
-    </footer>
+          </div>
 
-    <script>
-        lucide.createIcons();
-    </script>
+          <div class="phantom-glass p-5 rounded-2xl flex items-center gap-4">
+            <div class="p-3 bg-indigo-500/10 rounded-xl border border-indigo-500/20 text-indigo-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-slate-200">Response Time</h4>
+              <p class="text-xs text-slate-400">Same-day turnaround on estimate requests</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: FORM -->
+      <div class="lg:col-span-7">
+        <form class="phantom-glass rounded-3xl p-8 md:p-10 space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
+              <input type="text" required placeholder="Matthew Brancheau" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number *</label>
+              <input type="tel" required placeholder="(321) 555-0199" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
+              <input type="email" required placeholder="matt@example.com" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Service Type</label>
+              <select class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm">
+                <option>Smart Infrastructure & Electronics</option>
+                <option>Drywall & Finish Carpentry</option>
+                <option>Custom Mechanical & Mounting</option>
+                <option>General Property Repair / Consultation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Date</label>
+              <input type="date" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Window</label>
+              <select class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm">
+                <option>Morning (8:00 AM - 12:00 PM)</option>
+                <option>Afternoon (12:00 PM - 4:00 PM)</option>
+                <option>Flexible / Any Time</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Project Scope / Details</label>
+            <textarea rows="4" placeholder="Briefly describe what needs to be repaired, installed, or engineered..." class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl bg-indigo-500 text-white font-bold hover:bg-indigo-400 transition-all shadow-lg shadow-indigo-500/25 text-center tracking-wide uppercase text-sm">
+            Submit Calibration Request
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="phantom-glass border-t border-indigo-500/15 mt-20 py-10 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm">
+      <div class="flex items-center gap-3">
+        <img src="Sterling Repairs Logo Dark.png" class="h-8 w-auto opacity-80" alt="Sterling Logo" />
+        <span>© 2026 Sterling Smart Installations. All rights reserved.</span>
+      </div>
+      <div class="flex gap-6 text-xs text-slate-400">
+        <a href="#services" class="hover:text-indigo-400">Services</a>
+        <a href="#portfolio" class="hover:text-indigo-400">Portfolio</a>
+        <a href="#contact" class="hover:text-indigo-400">Contact</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
