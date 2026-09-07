@@ -157,7 +157,7 @@
     </div>
   </section>
 
-  <!-- CONTACT & SCHEDULING SECTION -->
+<!-- CONTACT & SCHEDULING SECTION -->
   <section id="contact" class="py-16 px-6 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
       
@@ -174,6 +174,17 @@
         </div>
 
         <div class="space-y-4">
+          <!-- Direct Phone Call Link -->
+          <a href="tel:3213451508" class="phantom-glass p-5 rounded-2xl flex items-center gap-4 hover:border-indigo-500/50 transition-all block group">
+            <div class="p-3 bg-indigo-500/10 rounded-xl border border-indigo-500/20 text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-slate-200">Call / Text Direct</h4>
+              <p class="text-sm font-bold text-indigo-400 group-hover:underline">(321) 345-1508</p>
+            </div>
+          </a>
+
           <div class="phantom-glass p-5 rounded-2xl flex items-center gap-4">
             <div class="p-3 bg-indigo-500/10 rounded-xl border border-indigo-500/20 text-indigo-400">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -198,26 +209,30 @@
 
       <!-- RIGHT COLUMN: FORM -->
       <div class="lg:col-span-7">
-        <form class="phantom-glass rounded-3xl p-8 md:p-10 space-y-6">
+        <form action="https://api.web3forms.com/submit" method="POST" class="phantom-glass rounded-3xl p-8 md:p-10 space-y-6">
+          <input type="hidden" name="access_key" value="e31ec77a-5ce4-4ab9-b1bc-8599bec53eda">
+          <input type="hidden" name="subject" value="New Calibration Request Submission">
+          <input type="hidden" name="from_name" value="Sterling Smart Installations">
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
-              <input type="text" required placeholder="Matthew Brancheau" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
+              <input type="text" name="name" required placeholder="Matthew Brancheau" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
             </div>
             <div>
               <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number *</label>
-              <input type="tel" required placeholder="(321) 555-0199" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
+              <input type="tel" name="phone" required placeholder="(321) 345-1508" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
-              <input type="email" required placeholder="matt@example.com" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
+              <input type="email" name="email" required placeholder="matt@example.com" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
             </div>
             <div>
               <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Service Type</label>
-              <select class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm">
+              <select name="service_type" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm">
                 <option>Smart Infrastructure & Electronics</option>
                 <option>Drywall & Finish Carpentry</option>
                 <option>Custom Mechanical & Mounting</option>
@@ -229,11 +244,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Date</label>
-              <input type="date" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
+              <input type="date" name="preferred_date" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm" />
             </div>
             <div>
               <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Window</label>
-              <select class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm">
+              <select name="preferred_window" class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm">
                 <option>Morning (8:00 AM - 12:00 PM)</option>
                 <option>Afternoon (12:00 PM - 4:00 PM)</option>
                 <option>Flexible / Any Time</option>
@@ -243,7 +258,7 @@
 
           <div>
             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Project Scope / Details</label>
-            <textarea rows="4" placeholder="Briefly describe what needs to be repaired, installed, or engineered..." class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm resize-none"></textarea>
+            <textarea name="message" rows="4" placeholder="Briefly describe what needs to be repaired, installed, or engineered..." class="w-full bg-[#0d0f17] border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm resize-none"></textarea>
           </div>
 
           <button type="submit" class="w-full py-4 rounded-xl bg-indigo-500 text-white font-bold hover:bg-indigo-400 transition-all shadow-lg shadow-indigo-500/25 text-center tracking-wide uppercase text-sm">
@@ -263,12 +278,10 @@
         <span>© 2026 Sterling Smart Installations. All rights reserved.</span>
       </div>
       <div class="flex gap-6 text-xs text-slate-400">
+        <a href="tel:3213451508" class="hover:text-indigo-400">(321) 345-1508</a>
         <a href="#services" class="hover:text-indigo-400">Services</a>
         <a href="#portfolio" class="hover:text-indigo-400">Portfolio</a>
         <a href="#contact" class="hover:text-indigo-400">Contact</a>
       </div>
     </div>
   </footer>
-
-</body>
-</html>
